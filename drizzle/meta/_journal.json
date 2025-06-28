@@ -29,6 +29,13 @@
       "when": 1751126846409,
       "tag": "0003_sweet_metal_master",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1751149232221,
+      "tag": "0004_plain_vulcan",
+      "breakpoints": true
     }
   ]
 }
