@@ -41,14 +41,14 @@ export const authenticateFromLink = new Elysia().use(auth).get(
     });
 
     authCookie?.set({
+      value: jwt,
       httpOnly: true,
       maxAge: 60 * 60 * 24 * 7, // 7 days
-      path: '/'
-    })
+      path: "/",
+    });
 
-    await db.delete(authLinks).where(eq(authLinks.code, code))
-
-     return redirect(redirectLink)
+    await db.delete(authLinks).where(eq(authLinks.code, code));
+    return redirect(redirectLink);
   },
   {
     query: t.Object({
